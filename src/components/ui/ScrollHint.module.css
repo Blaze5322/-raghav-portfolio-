@@ -1,0 +1,40 @@
+.hint {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.hint.visible {
+  opacity: 1;
+}
+
+.text {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--muted);
+  letter-spacing: 0.25em;
+}
+
+.arrow {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, transparent, var(--warm));
+  animation: pulse 2s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scaleY(0.85); }
+  50%       { opacity: 1;   transform: scaleY(1); }
+}
+
+@media (max-width: 768px) {
+  .hint { display: none; }
+}

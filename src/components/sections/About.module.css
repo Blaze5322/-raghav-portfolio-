@@ -1,0 +1,85 @@
+.about {
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: min(400px, 42vw);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.about.visible { opacity: 1; }
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--warm);
+  letter-spacing: 0.3em;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+  color: var(--cream);
+  font-weight: 300;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+.body {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.95;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.achievements {
+  margin-bottom: 1.5rem;
+}
+
+.achievement {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted2);
+  line-height: 2;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  color: var(--warm);
+  opacity: 0.5;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--warm);
+  border: 1px solid rgba(200, 149, 108, 0.28);
+  padding: 0.3rem 0.75rem;
+  letter-spacing: 0.06em;
+  transition: background var(--transition-fast);
+}
+
+.tag:hover {
+  background: rgba(200, 149, 108, 0.08);
+}
+
+@media (max-width: 1024px) {
+  .about {
+    width: min(380px, 90vw);
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}

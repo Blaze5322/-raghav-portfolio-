@@ -1,0 +1,257 @@
+.layout {
+  display: none;
+  flex-direction: column;
+  background: var(--dark);
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .layout { display: flex; }
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.heroName {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+  white-space: pre-line;
+  margin-bottom: 1rem;
+}
+
+.heroTag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--warm);
+  letter-spacing: 0.45em;
+  margin-bottom: 1.5rem;
+}
+
+.heroBio {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+  max-width: 300px;
+}
+
+.heroDivider {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, transparent, var(--warm));
+}
+
+/* Sections */
+.section {
+  padding: 4rem 1.5rem;
+  border-top: 1px solid rgba(200, 149, 108, 0.1);
+}
+
+.sectionLabel {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--warm);
+  letter-spacing: 0.3em;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.body {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--warm);
+  border: 1px solid rgba(200, 149, 108, 0.22);
+  padding: 0.28rem 0.65rem;
+}
+
+/* Cards */
+.card {
+  background: rgba(200, 149, 108, 0.04);
+  border: 1px solid rgba(200, 149, 108, 0.14);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 0.45rem;
+}
+
+.cardDesc {
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.cardStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.tech {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--warm);
+  border: 1px solid rgba(200, 149, 108, 0.2);
+  padding: 0.18rem 0.45rem;
+}
+
+.cardLink {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--warm);
+  border: 1px solid rgba(200, 149, 108, 0.28);
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  transition: background 0.25s;
+}
+
+.cardLink:hover {
+  background: rgba(200, 149, 108, 0.08);
+}
+
+/* Skills */
+.skillGroup {
+  margin-bottom: 1.5rem;
+}
+
+.skillGroupLabel {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  color: var(--muted2);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--warm);
+  border: 1px solid rgba(200, 149, 108, 0.2);
+  padding: 0.28rem 0.65rem;
+}
+
+/* Certs */
+.certCard {
+  border-color: rgba(200, 149, 108, 0.25);
+}
+
+.certIssuer {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--warm);
+  margin-bottom: 0.4rem;
+}
+
+.certTitle {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.certDate {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--muted);
+}
+
+/* Contact */
+.contactSection {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contactTitle {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--cream);
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.contactLink {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--cream);
+  border: 1px solid rgba(200, 149, 108, 0.2);
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.contactLink:hover {
+  border-color: var(--warm);
+  color: var(--warm);
+}
+
+.mobFooter {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  color: var(--muted2);
+  letter-spacing: 0.15em;
+  margin-top: 2rem;
+  text-align: center;
+}

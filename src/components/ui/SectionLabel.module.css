@@ -1,0 +1,17 @@
+.label {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 3rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  z-index: 20;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .label { display: none; }
+}

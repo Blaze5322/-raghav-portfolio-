@@ -1,0 +1,59 @@
+.hero {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.hero.visible { opacity: 1; }
+
+.name {
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 9vw, 6.5rem);
+  color: var(--cream);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1em;
+}
+
+.word {
+  display: block;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: wordUp 0.8s ease forwards;
+}
+
+.hero.visible .word {
+  animation: wordUp 0.8s ease forwards;
+}
+
+@keyframes wordUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: clamp(0.65rem, 1.4vw, 0.88rem);
+  color: var(--warm);
+  letter-spacing: 0.55em;
+  margin-top: 1.8rem;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 1s ease 0.4s forwards;
+}
+
+.hero.visible .tagline {
+  animation: fadeIn 1s ease 0.4s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
